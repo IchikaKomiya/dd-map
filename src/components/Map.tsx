@@ -77,17 +77,18 @@ export default function MapView({ spots, onSelect }: Props) {
     if (spots.length === 0) return;
 
     for (const spot of spots) {
-      const el = document.createElement("button");
-      el.className =
-        "block w-7 h-7 rounded-full bg-blue-600 border-2 border-white shadow-md hover:scale-110 transition-transform cursor-pointer";
-      el.title = spot.spot_name;
-      el.setAttribute("aria-label", spot.spot_name);
-
-      const popup = new Popup({ offset: 16, closeButton: true }).setHTML(buildPopupHtml(spot));
-      const marker = new Marker({ element: el })
+      const popup = new Popup({ offset: 25, closeButton: true, maxWidth: "320px" }).setHTML(
+        buildPopupHtml(spot),
+      );
+      // MapLibre標準SVGマーカー（青）。下端アンカーで位置決め、クリックで popup 開閉が標準動作
+      const marker = new Marker({ color: "#1a73e8" })
         .setLngLat([spot.lng, spot.lat])
         .setPopup(popup)
         .addTo(map);
+      const el = marker.getElement();
+      el.style.cursor = "pointer";
+      el.setAttribute("aria-label", spot.spot_name);
+      el.setAttribute("title", spot.spot_name);
       el.addEventListener("click", () => onSelect?.(spot));
       markersRef.current.push(marker);
     }
