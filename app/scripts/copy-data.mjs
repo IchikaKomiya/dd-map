@@ -4,7 +4,8 @@
 import { copyFileSync, existsSync, mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 
-const src = "data.csv";
+// app/ がCWDなので、root の data.csv は ../data.csv
+const src = "../data.csv";
 const dst = "public/data.csv";
 
 if (!existsSync(src)) {

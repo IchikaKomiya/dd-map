@@ -22,6 +22,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app
     steps:
       - uses: actions/checkout@v4
 
@@ -33,10 +36,11 @@ jobs:
         with:
           node-version: 24
           cache: pnpm
+          cache-dependency-path: ./app/pnpm-lock.yaml
 
       - run: pnpm install --frozen-lockfile
 
-      # build前に prebuild フックが data.csv -> public/data.csv をコピー（scripts/copy-data.mjs）
+      # prebuild フックで ../data.csv -> public/data.csv が自動コピーされる
       - name: Build
         env:
           NEXT_PUBLIC_BASE_PATH: /dd-map
@@ -48,7 +52,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./app/out
 
   deploy:
     needs: build

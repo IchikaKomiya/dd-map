@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# dd-map
 
-## Getting Started
+銚子の観光スポットを地図上で表示するオープンデータ公開システム。
 
-First, run the development server:
+## 構成
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+dd-map/
+├── data.csv            観光スポットの実データ（GAS から自動push）
+├── app/                Next.js 製の公開マップアプリ
+└── .github/workflows/  GitHub Actions（Pagesへ自動デプロイ）
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 公開URL: <https://ichikakomiya.github.io/dd-map/>
+- データ管理側: <https://github.com/IchikaKomiya/dd-map-gas>（別リポジトリのGAS）
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 開発
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+cd app
+pnpm install
+pnpm dev
+```
 
-## Learn More
+詳細は [`app/README.md`](app/README.md) を参照。
 
-To learn more about Next.js, take a look at the following resources:
+## データ更新フロー
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. GASスプレッドシートで入力 → 取得 → 承認用へ追加
+2. 承認用シートで承認チェック → 「公開マスタへ反映」
+3. 「GitHub へ data.csv を push」 → ここに `data.csv` が更新される
+4. GitHub Actions が自動でビルド・デプロイ
