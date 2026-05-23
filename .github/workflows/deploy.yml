@@ -14,6 +14,11 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+# Node.js 20 を使う既存アクションを先行的に Node.js 24 ランタイムで動かす
+# （2026-06-02 以降 GitHub Actions 側で強制化される予定）
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   build:
     runs-on: ubuntu-latest
