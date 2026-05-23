@@ -1,8 +1,15 @@
-id,spot_name,category,types,address,tel,opening_hours,url_official,url_maps,lat,lng,plus_code,description,rating,reviews_count,confirmed_at,notes,suggestions
+id,spot_name,category,types,address,tel,opening_hours,url_official,url_maps,lat,lng,plus_code,description,rating,reviews_count,confirmed_at,notes
 ChIJ_-u7JOc8I2ARXxpaP0H_pnQ,犬吠埼灯台,観光名所,"tourist_attraction, observation_deck, point_of_interest, establishment",日本、〒288-0012 千葉県銚子市犬吠埼９５７６,+81 479-25-8239,"月曜日: 8時30分～17時00分
 火曜日: 8時30分～17時00分
 水曜日: 8時30分～17時00分
 木曜日: 8時30分～17時00分
 金曜日: 8時30分～17時00分
 土曜日: 8時30分～17時00分
-日曜日: 8時30分～17時00分",https://www.tokokai.org/tourlight/tourlight03/,"https://www.google.co.jp/maps/place/%E7%8A%AC%E5%90%A0%E5%9F%BC%E7%81%AF%E5%8F%B0/@35.7066513,140.8635229,16z/data=!4m16!1m9!3m8!1s0x60233cdc3d27d62b:0x6530fb662f427e23!2z44CSMjg4LTAwMTIg5Y2D6JGJ55yM6Yqa5a2Q5biC54qs5ZCg5Z-8!3b1!8m2!3d35.7066513!4d140.8635229!10e5!16s%2Fg%2F1pxy7qnbr!3m5!1s0x60233ce724bbebff:0x74a6ff413f5a1a5f!8m2!3d35.7079034!4d140.8685033!16s%2Fm%2F0g58mrc?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D",35.7079034,140.8685033,8R72PV59+5C,19 世紀後半に建てられた登れる灯台。最上部からは太平洋のパノラマ風景を一望できる。,4.1,8978,2026-05-23 23:32:15,test,abc
+日曜日: 8時30分～17時00分",https://www.tokokai.org/tourlight/tourlight03/,"https://www.google.co.jp/maps/place/%E7%8A%AC%E5%90%A0%E5%9F%BC%E7%81%AF%E5%8F%B0/@35.7066513,140.8635229,16z/data=!4m16!1m9!3m8!1s0x60233cdc3d27d62b:0x6530fb662f427e23!2z44CSMjg4LTAwMTIg5Y2D6JGJ55yM6Yqa5a2Q5biC54qs5ZCg5Z-8!3b1!8m2!3d35.7066513!4d140.8635229!10e5!16s%2Fg%2F1pxy7qnbr!3m5!1s0x60233ce724bbebff:0x74a6ff413f5a1a5f!8m2!3d35.7079034!4d140.8685033!16s%2Fm%2F0g58mrc?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D",35.7079034,140.8685033,8R72PV59+5C,19 世紀後半に建てられた登れる灯台。最上部からは太平洋のパノラマ風景を一望できる。,4.1,8978,2026-05-23 23:50:49,チケット情報あり
+ChIJ-aifu9M8I2ARv_yqDZ2-Ns4,犬岩,景勝地,"scenic_spot, tourist_attraction, point_of_interest, establishment",日本、〒288-0015 千葉県銚子市犬若,+81 479-22-6502,"月曜日: 24 時間営業
+火曜日: 24 時間営業
+水曜日: 24 時間営業
+木曜日: 24 時間営業
+金曜日: 24 時間営業
+土曜日: 24 時間営業
+日曜日: 24 時間営業",http://www.choshi-geopark.jp/geosite/20/index.html,"https://www.google.co.jp/maps/place/%E7%8A%AC%E5%B2%A9/@35.6980682,140.8430795,17z/data=!3m1!4b1!4m6!3m5!1s0x60233cd3bb9fa8f9:0xce36be9d0daafcbf!8m2!3d35.6980639!4d140.8456544!16s%2Fg%2F11b6vfsk5c?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D",35.6980389,140.84550149999998,8R72MRXW+66,説明なし,3.9,536,2026-05-23 23:52:09,銚子百選
