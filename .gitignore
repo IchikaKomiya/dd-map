@@ -49,3 +49,6 @@ next-env.d.ts
 /CLAUDE.md
 /AGENTS.md
 /.claude/
+
+# data.csv は root が真実。public/data.csv は予期/前ビルドで自動生成（追跡しない）
+/public/data.csv

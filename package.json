@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "copy-data": "node scripts/copy-data.mjs",
+    "predev": "pnpm copy-data",
+    "prebuild": "pnpm copy-data",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

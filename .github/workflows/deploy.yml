@@ -31,16 +31,7 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      # リポジトリ root の data.csv（GASがpushする本番データ）を public/ にコピー
-      - name: Copy data.csv into public/
-        run: |
-          if [ -f data.csv ]; then
-            cp data.csv public/data.csv
-            echo "Copied data.csv ($(wc -l < data.csv) lines)"
-          else
-            echo "Warning: data.csv not found at repo root. Using existing public/data.csv."
-          fi
-
+      # build前に prebuild フックが data.csv -> public/data.csv をコピー（scripts/copy-data.mjs）
       - name: Build
         env:
           NEXT_PUBLIC_BASE_PATH: /dd-map
